@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Jagdamba Electronics</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --ink: #172033;
+      --muted: #64748b;
+      --surface: #ffffff;
+      --background: #f4f7fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top right, #dbeafe, transparent 35%), var(--background);
+    }
+
+    .card {
+      width: min(720px, 100%);
+      padding: clamp(32px, 7vw, 72px);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      box-shadow: 0 24px 70px rgba(30, 64, 175, 0.14);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      color: var(--blue-dark);
+      background: #dbeafe;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.08;
+    }
+
+    p {
+      margin: 0 auto 30px;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.6;
+    }
+
+    .search {
+      display: flex;
+      gap: 10px;
+      max-width: 560px;
+      margin: 0 auto 18px;
+    }
+
+    input {
+      min-width: 0;
+      flex: 1;
+      padding: 15px 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      outline: none;
+      font: inherit;
+    }
+
+    input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #bfdbfe; }
+
+    button, .google-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 22px;
+      border: 0;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--blue);
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+
+    button:hover, .google-link:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+    .google-link {
+      color: var(--blue-dark);
+      background: #eff6ff;
+    }
+
+    .google-link:hover { color: #fff; background: var(--blue); }
+
+    footer { margin-top: 34px; color: #94a3b8; font-size: .9rem; }
+
+    @media (max-width: 520px) {
+      .search { flex-direction: column; }
+      button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="badge">Welcome</span>
+    <h1>New Jagdamba Electronics</h1>
+    <p>Your simple starting point for discovering electronics, services, and useful resources online.</p>
+
+    <form class="search" action="https://www.google.com/search" method="get">
+      <input name="q" type="search" placeholder="Search with Google" aria-label="Search with Google" />
+      <button type="submit">Search Google</button>
+    </form>
+
+    <a class="google-link" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Open Google</a>
+    <footer>Fast, simple, and ready to explore.</footer>
+  </main>
+</body>
+</html>
